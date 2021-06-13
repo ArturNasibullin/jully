@@ -1,0 +1,28 @@
+html
+	@include fluidFontSize($font-size--xsmall, $font-size--base)
+body
+	font-family: $font-family__primary
+	font-weight: $font-weight--regular
+	color: $colors--text
+	overflow-x: hidden
+	padding: 0px 0 0 0
+.container
+	max-width: 1140px
+	padding: 15px
+	margin: 0 auto
+	width: 100%
+.yellow-line
+	background: $colors--primary
+	height: 50px
+	width: 100%
+	position: absolute
+	z-index: 12
+	top: 0
+	left: 0
+	@include _768
+		display: none
+.confedencial
+	font-size: 1rem
+	line-height: 15px
+	text-align: center
+	color: #737373
