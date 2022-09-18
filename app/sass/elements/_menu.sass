@@ -1,0 +1,40 @@
+.menu
+	&-grid
+		position: relative
+		top: 0
+		left: 0
+		padding: 0 15px
+		max-width: 1140px
+		margin: 0 auto
+		display: grid
+		grid-template-columns: 20% 80%
+		align-items: center
+		@include _768
+			// grid-template-columns: 25% 50% 25%
+			// grid-template-areas: "header__logo top-line__phone"
+.menu-desktop
+	justify-self: center
+	align-self: center
+	font-size: 1.6rem
+	@include _768
+		display: none
+	&__item
+		padding-left: 22px
+	&__link
+		transition: background-color 0.3s
+		position: relative
+		&:before
+			content: ""
+			width: 0
+			height: 1px
+			position: absolute
+			bottom: -3px
+			left: 50%
+			background: $colors--text
+			transition: all 0.3s
+		&:hover
+			cursor: pointer
+		&:hover:before
+			width: 100%
+			left: 0
+			background-color: $colors--text

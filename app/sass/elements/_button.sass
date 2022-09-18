@@ -3,17 +3,23 @@
 	cursor: pointer
 	outline: none
 	display: flex
+	flex-direction: row
 	justify-content: center
+	align-items: center
+	padding: 20px 35px
+	width: 270px
+	height: 60px
+	background: linear-gradient(95.03deg, #F09642 0%, #F0DF42 145.26%)
+	border-radius: 40px
 	border: 1px solid #FBD846
-	filter: drop-shadow(2px 2px 4px rgba(255, 216, 111, 0.4))
-	border-radius: 30px
-	color: $colors--text
+	ffilter: drop-shadow(4px 4px 10px rgba(240, 150, 66, 0.49))
+	color: #fff
 	font-size: 1.6rem
 	line-height: 20px
-	font-weight: $font-weight--bold
+	font-weight: $font-weight--regular
 	text-align: center
-	height: 50px
-	padding: 15px 26px
+	text-transform: uppercase
+
 	@include _768
 		font-size: 2rem
 	&:active
