@@ -4,6 +4,10 @@
 		grid-template-columns: 50% 50%
 		justify-content: center
 		align-items: center
+		@include _768
+			grid-template-columns: 1fr
+			grid-template: repeat(2, 1fr)
+
 	&-subtitle
 		margin-bottom: 20px
 	p
@@ -22,3 +26,5 @@
 				top: 2px
 	&-btn
 		margin-top: 40px
+		@include _768
+			margin: 40px auto

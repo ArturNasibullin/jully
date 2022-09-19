@@ -4,6 +4,9 @@
 	background-repeat: no-repeat
 	background-size: 70%
 	height: 800px
+	@include _768
+		background-position: 0 0
+		background-size: 100%
 	&-wrap
 		max-width: 1140px
 		margin: 0 auto
@@ -12,6 +15,9 @@
 	&-text
 		width: 70%
 		padding: 50px 30px 0 0
+		@include _768
+			width: 100%
+			padding: 50px 0 0 0
 		&__name
 			font-weight: $font-weight--bold
 			font-size: 4rem
