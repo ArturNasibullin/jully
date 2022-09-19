@@ -1,23 +1,40 @@
-.menu
-	&-grid
-		position: relative
-		top: 0
-		left: 0
-		padding: 0 15px
-		max-width: 1140px
-		margin: 0 auto
-		display: grid
-		grid-template-columns: 20% 80%
-		align-items: center
+.navbar
+	padding: 40px 0px
+	max-width: 1140px
+	display: grid
+	grid-template-columns: 20% 80%
+	align-items: center
+	justify-content: center
+	&-logo
+		width: 30%
 		@include _768
-			// grid-template-columns: 25% 50% 25%
-			// grid-template-areas: "header__logo top-line__phone"
-.menu-desktop
-	justify-self: center
-	align-self: center
+			display: none
+	&--fixed
+		z-index: 9999
+		// background-color: #f1f1f1
+		position: fixed
+		opacity: .9
+		width: 100%
+		height: 70px
+		backdrop-filter: blur(14px)
+		top: 0px
+		left: 100px
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		padding: 10px 15px 15px
+		img
+			width: 10%
+
+.navbar-links
 	font-size: 1.6rem
+	transition: opacity 0.3s
+	justify-self: center
 	@include _768
-		display: none
+		opacity: 0
+		height: 0
+		visibility: hidden
 	&__item
 		padding-left: 22px
 	&__link
@@ -38,3 +55,20 @@
 			width: 100%
 			left: 0
 			background-color: $colors--text
+	&.active
+		opacity: 1
+		visibility: visible
+		position: fixed
+		top: 30px
+		left: 90px
+		z-index: 999
+		display: flex
+		flex-flow: column nowrap
+		width: 40%
+		height: auto
+		background-color: #ffffffb6
+		border-radius: 10px
+		font-size: 3rem
+		padding: 20px
+		li
+			padding: 10px 0
